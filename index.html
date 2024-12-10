@@ -1,89 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <title>Aim AS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Layer a gradient over the background image to create a fade-to-black effect */
+            background:
+                linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%),
+                url('intro-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
 
-    <title>AIM AS</title>
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
 
+        .splash {
+            font-family: monospace;
+            margin: 0;
+            max-width: 400px; /* optional to control the width of the text block */
+        }
 
-    <!-- Bootstrap Core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+        .splash-content {
+            text-align: left;
+            width: 200px;
+        }
 
-    <!-- Custom CSS -->
-    <link href="grayscale.css" rel="stylesheet">
+        .splash h1 {
+            margin: 0;
+            line-height: 1.2;
+            font-size: 2rem;
+        }
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        .subtle {
+            font-weight: lighter;
+            opacity: 0.8;
+        }
 
-    <link rel="stylesheet" href="styles.css">
+        .typewrite {
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        .footer {
+            font-family: monospace;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
     <script type="text/javascript" src="script.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="center-container">
-                            <div class="center-child">
-                                <h1>
-                                    A<span style="color:lightgray;">ndersen</span><br>
-                                    I<span style="color:lightgray" class="typewrite" data-period="2000" data-type='["nformation", "nvestment", "novation"]'>
-                                        <span class="wrap"></span>
-                                    </span><br>
-                                    M<span style="color:lightgray">anagement</span><br><br>
-                                    A<span style="color:lightgray">ksje</span><br>
-                                    S<span style="color:lightgray">elskap</span>
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<body>
+    <div class="container">
+        <div class="splash">
+            <div class="splash-content">
+                <h1>
+                    A<span class="subtle">ndersen</span><br>
+                    I<span class="typewrite subtle" data-period="2000" data-type='["nformation", "nvestment", "novation"]'>
+                        <span class="wrap"></span>
+                    </span><br>
+                    M<span class="subtle">anagement</span><br><br>
+                    A<span class="subtle">ksje</span><br>
+                    S<span class="subtle">elskap</span>
+                </h1>
             </div>
         </div>
-    </header>
-
-    <!-- Map Section -->
-    <div id="map"></div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p><a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=917021961">AIM AS</a> | <a href="https://www.linkedin.com/in/andre-c-andersen/">André C. Andersen</a> | <a href="mailto:andre@andersen.im">andre@andersen.im</a> | <a href="tel:+4797182991">+47 971 82 991</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="grayscale.js"></script>
-
+    </div>
+    <div class="footer">
+        <p>
+            <a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=917021961">Aim AS</a> | 
+            <a href="https://www.linkedin.com/in/andre-c-andersen/">André C. Andersen</a> | 
+            <a href="mailto:andre@andersen.im">andre@andersen.im</a> | 
+            <a href="tel:+4797182991">+47 971 82 991</a>
+        </p>
+    </div>
 </body>
-
 </html>
